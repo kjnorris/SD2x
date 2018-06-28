@@ -4,5 +4,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="src/junit-dist.jar"/>
 	<classpathentry kind="lib" path="src/homework1-tests.jar"/>
+	<classpathentry kind="lib" path="src/homework2-tests.jar"/>
+	<classpathentry kind="lib" path="src/homework3-tests.jar"/>
+	<classpathentry kind="lib" path="homework4-tests.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
