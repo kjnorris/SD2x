@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-LtzsH7NEei-lrTzIFPxow" name="HW8Library">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_-QYRQH7NEei-lrTzIFPxow">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_E03R8H7OEei-lrTzIFPxow" name="DataTier">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_M1y7IH7REei-lrTzIFPxow" name="fileName" visibility="package">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_10yvkH7OEei-lrTzIFPxow" name="getAllBooks">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_NuM0sH7PEei-lrTzIFPxow" name="allBooks" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bzAosH7OEei-lrTzIFPxow" name="Book">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_f0aooH7OEei-lrTzIFPxow" name="title">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lgYF4H7OEei-lrTzIFPxow" name="author">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_oL7GIH7OEei-lrTzIFPxow" name="publicationYear">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_SvchAH7PEei-lrTzIFPxow" client="_E03R8H7OEei-lrTzIFPxow" supplier="_bzAosH7OEei-lrTzIFPxow"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WSnFwH7PEei-lrTzIFPxow" name="LogicTier">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UkIVQH7QEei-lrTzIFPxow" name="findBookTitlesByAuthor">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZlWzcH7QEei-lrTzIFPxow" name="author">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cGbCAH7QEei-lrTzIFPxow" name="bookList" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gBo6YH7QEei-lrTzIFPxow" name="findNumberOfBooksInYear">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ohYt4H7QEei-lrTzIFPxow" name="year">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qdcx8H7QEei-lrTzIFPxow" name="numBooks" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_utCE4H7dEei-lrTzIFPxow" name="getBookList" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_186zAH7dEei-lrTzIFPxow" name="bookList" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__zcMMH7dEei-lrTzIFPxow" name="findAuthor" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ChvlgH7eEei-lrTzIFPxow" name="author">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_E67qcH7eEei-lrTzIFPxow" name="fullName" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZVr1MH7PEei-lrTzIFPxow" name="PresentationTier">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_JFFfEH7QEei-lrTzIFPxow" name="showBookTitlesByAuthor" concurrency="concurrent">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_NwvV4H7QEei-lrTzIFPxow" name="author">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Pef4MH7QEei-lrTzIFPxow" name="showNumberOfBooksInYear">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_SVdeQH7QEei-lrTzIFPxow" name="year">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nKcdMH7dEei-lrTzIFPxow" name="start"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_EFWOoH7QEei-lrTzIFPxow" client="_WSnFwH7PEei-lrTzIFPxow" supplier="_E03R8H7OEei-lrTzIFPxow"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_FjfAkH7QEei-lrTzIFPxow" client="_ZVr1MH7PEei-lrTzIFPxow" supplier="_-LtzsH7NEei-lrTzIFPxow"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_z9SJcH7QEei-lrTzIFPxow" client="_WSnFwH7PEei-lrTzIFPxow" supplier="_bzAosH7OEei-lrTzIFPxow"/>
+</uml:Model>
